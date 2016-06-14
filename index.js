@@ -301,7 +301,7 @@ parser.normalizeHeading = function (obj) {
     o.heading.prefix = '.';
   }
 
-  if (/^[A-Z]/.test(o.name)) {
+  if (!o.type && /^[A-Z]/.test(o.name)) {
     o.type = 'class';
   }
   return o;
